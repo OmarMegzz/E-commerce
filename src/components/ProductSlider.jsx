@@ -33,10 +33,10 @@ function ProductSlider() {
   }
 
   return (
-    <div className="px-12 py-12  bg-gray-100 ">
+    <div className="px-12 py-12 bg-gray-100 ">
       <Slider {...settings}>
         {products.slice(0, 5).map((product) => (
-          <div key={product.id} className="px-20">
+          <div key={product.id} className="px-10">
             <ProductCard product={product} />
           </div>
         ))}

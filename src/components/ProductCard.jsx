@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import useCartStore from "../store/cartStore";
 
 function ProductCard({ product }) {
+  const { addToCart } = useCartStore();
   const { image, title, description, category, rating, price } = product;
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -37,6 +39,12 @@ function ProductCard({ product }) {
       </div>
 
       <div className="text-lg font-bold">${price}</div>
+      <button
+        onClick={() => addToCart(product)}
+        className="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
+      >
+        Add to Cart
+      </button>
     </div>
   );
 }
