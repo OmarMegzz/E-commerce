@@ -10,7 +10,7 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-md p-4 flex flex-col justify-between hover:shadow-lg transition-shadow">
+    <div className="bg-white rounded-2xl shadow-md p-4 flex flex-col justify-between hover:shadow-lg transition-shadow hover:transform-3d hover:scale-105 duration-300">
       <img
         src={image}
         alt={title}
